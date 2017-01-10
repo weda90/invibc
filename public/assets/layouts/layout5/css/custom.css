@@ -1,0 +1,64 @@
+/* here you can put your own css to customize and override the theme */
+
+/*.dataTables_extended_wrapper {
+  margin-top: 10px; }
+
+ .dataTables_extended_wrapper .table.dataTable {
+    margin: 0px 0 !important; }
+
+table.dataTable {
+    clear: both;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    max-width: none !important;
+}
+
+.portlet.light .dataTables_wrapper .dt-buttons {
+    margin-top: -117px;
+}*/
+.portlet > .portlet-title > .actions > .btn-group > .btn {
+	padding: 10px 16px;
+}
+
+
+.table-checkable tr.child > td.child {
+	text-align: left;
+    max-width: auto; 
+    min-width: auto;
+    padding-left: 10px; 
+    padding-right: 10px; 
+}
+
+
+table.dataTable>tbody>tr.child span.dtr-title {
+    /*display: inline-block;*/
+    min-width: 110px;
+    /*font-weight: bold;*/
+}
+
+.dataTables_extended_wrapper div.dataTables_paginate {
+	display: block;
+}
+
+.table-scrollable .dataTable td .btn-group {
+    position: inherit;
+}
+.popover.top {
+    margin-top: 0px;
+}
+
+.dataTables_extended_wrapper .table.dataTable {
+    margin: 0px 0 !important; 
+}
+
+
+
+.sweet-alert .sa-icon, .sweet-alert .sa-icon.sa-success .sa-placeholder {
+    -webkit-border-radius: 40px !important;
+    border-radius: 40px !important;
+    border-radius: 50% !important;
+}
+
+
+/*.select2-container--default .select2-selection--single {
+    border-radius: 0px; }*/
