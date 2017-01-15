@@ -82,10 +82,10 @@ License: You must have a valid license purchased only from themeforest(the above
                             {{-- @foreach(Request::segments() as $segment)
 
                             @endforeach --}}
-                            <li>
+                           {{--  <li>
                                 <a href="#">Pages</a>
                             </li>
-                            <li class="active">System</li>
+                            <li class="active">System</li> --}}
                         </ol>
                         <!-- Sidebar Toggle Button -->
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".page-sidebar">
@@ -165,8 +165,8 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- END SIDEBAR CONTENT LAYOUT -->
                 </div>
                 <!-- BEGIN FOOTER -->
-                <p class="copyright">2015 © Metronic by keenthemes.
-                    <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
+                <p class="copyright">2017 © INVIBC by weda.dewa. {{-- - Design: 2015 © Metronic by keenthemes. --}}
+                    {{-- <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a> --}}
                 </p>
                 <a href="#index" class="go2top">
                     <i class="icon-arrow-up"></i>
@@ -176,7 +176,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
         <!-- END CONTAINER -->
         <!-- BEGIN QUICK SIDEBAR -->
-        <a href="javascript:;" class="page-quick-sidebar-toggler">
+        {{-- <a href="javascript:;" class="page-quick-sidebar-toggler">
             <i class="icon-login"></i>
         </a>
         <div class="page-quick-sidebar-wrapper" data-close-on-body-click="false">
@@ -734,7 +734,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- END QUICK SIDEBAR -->
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>

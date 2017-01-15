@@ -285,14 +285,28 @@ var TableDatatablesResponsive = function () {
                 var arr = Object.keys(data).map(function(key) { return data[key] });
                 var i = 0;
 
+
                 inputForm.each(function(index, el) {
 
                     if ($(this).hasClass('select2')) {
 
                         var data = arr[i++];
 
-                        $(this).append('<option value='+data+'>'+data+'</option>');
-                        $(this).select2('val', data, true);
+                        // console.log(data);
+                        // console.log($(this));
+
+                        // $(this).append('<option value='+data+'>'+data+'</option>');
+                        // $(this).append("<option value="+data+">"+data.replace(/\'/g,"")+"</option>");
+                        // $(this).trigger('change');
+                        // $(this).select2('val', data, true);
+
+                        // console.log($(this).select2())
+                        var option = new Option(data,data);
+                        option.selected = true;
+
+                        $(this).append(option);
+                        $(this).trigger('change');
+                        
 
                     }else{
                         $(this).val( arr[i++] );

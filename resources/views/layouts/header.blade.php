@@ -156,7 +156,9 @@
                     </div> --}}
                     <!-- END GROUP INFORMATION -->
                     <!-- BEGIN USER PROFILE -->
+                    @if(Auth::check())
                     @include('layouts.userProfile')
+                    @endif
                     <!-- END USER PROFILE -->
                     <!-- BEGIN QUICK SIDEBAR TOGGLER -->
                     {{-- <button type="button" class="quick-sidebar-toggler md-skip" data-toggle="collapse">

@@ -151,7 +151,7 @@
                         <button class="btn btn-sm green table-group-action-submit">
                             <i class="fa fa-check"></i> Submit</button>
                     </div>
-                    <table class="table table-striped table-bordered table-hover dt-responsive table-checkable" width="100%" id="datatable_ajax"  data-table="material">
+                    <table class="table table-striped table-bordered table-hover dt-responsive table-checkable" width="100%" id="datatable_ajax"  data-table="master/material">
                         <thead>
                             <tr role="row" class="heading">
                                 <th width="2%" class="all">
@@ -175,7 +175,7 @@
                 </div>
                 {{-- Begin Form --}}
                 {{-- Begin Form --}}
-                {{ Form::open(array('url' => 'ajax/master/material', 'method' => 'POST', 'id'=>'form_sample_2', 'class'=>'form-horizontal', 'data-controller' => 'material')) }}
+                {{ Form::open(array('url' => 'ajax/master/material', 'method' => 'POST', 'id'=>'form_sample_2', 'class'=>'form-horizontal', 'data-controller' => 'master/material')) }}
                 {{-- {{ Form::create([‘method’ => ‘PUT’]) }} --}}
                 <div class="form-body">
                     <div class="alert alert-danger display-hide">

@@ -31,21 +31,49 @@
                     <a href="{{ url('/master/company') }}">
                         <i class="icon-bar-chart"></i> Company </a>
                 </li>
-
-                {{-- <li>
-                    <a href="{{ url('/users') }}">
-                        <i class="icon-bar-chart"></i> Users </a>
-                </li>
-                <li>
-                    <a href="{{ url('/roles') }}">
-                        <i class="icon-bar-chart"></i> Roles </a>
-                </li>
-                <li>
-                    <a href="{{ url('/permission') }}">
-                        <i class="icon-bar-chart"></i> permission </a>
-                </li> --}}
             </ul>
         </li>
+
+        <li class="dropdown dropdown-fw @if(Request::is('stock/*')) active open selected @endif">
+            <a href="javascript:;" class="text-uppercase">
+                <i class="icon-puzzle"></i> stock </a>
+            <ul class="dropdown-menu dropdown-menu-fw">
+                <li @if(Request::is('stock/receiving')) class="active" @endif>
+                    <a href="{{ url('/stock/receiving') }}">
+                        <i class="icon-bar-chart"></i> Receiving </a>
+                </li>
+                <li @if(Request::is('stock/outgoing')) class="active" @endif>
+                    <a href="{{ url('/stock/outgoing') }}">
+                        <i class="icon-bar-chart"></i> Outgoing </a>
+                </li>
+            </ul>
+        </li>
+        
+        <li class="dropdown dropdown-fw @if(Request::is('report/*')) active open selected @endif">
+            <a href="javascript:;" class="text-uppercase">
+                <i class="icon-puzzle"></i> report </a>
+            <ul class="dropdown-menu dropdown-menu-fw">
+                {{-- <li @if(Request::is('report/receiving')) class="active" @endif>
+                    <a href="{{ url('/report/receiving') }}">
+                        <i class="icon-bar-chart"></i> Receiving </a>
+                </li>
+                <li @if(Request::is('report/outgoing')) class="active" @endif>
+                    <a href="{{ url('/report/outgoing') }}">
+                        <i class="icon-bar-chart"></i> Outgoing </a>
+                </li> --}}
+                @foreach(DB::table('bc_type')->get() as $bc)
+                    <li @if(Request::is('report/'.$bc->id)) class="active" @endif>
+                        <a href="{{ url('/report/'.$bc->id) }}">
+                            <i class="icon-bar-chart"></i> {{ $bc->name }} </a>
+                    </li>{{-- 
+                    {{ $bc->id }}
+                    {{ $bc->name }} --}}
+                @endforeach
+            </ul>
+        </li>
+        
+
+        {{-- {{ dump(DB::table('bc_type')->get()) }} --}}
 
        {{--  <li class="dropdown dropdown-fw  ">
             <a href="javascript:;" class="text-uppercase">

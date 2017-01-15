@@ -19,8 +19,8 @@ class CreateCompanyTable extends Migration {
 			$table->integer('type');
 			$table->text('address');
 			$table->string('npwp')->index();
-			$table->string('status');
-			$table->string('location');
+			$table->integer('status');
+			$table->integer('location');
 			$table->string('created_by',25);
 			$table->timestamps();
 		});

@@ -116,16 +116,14 @@ var FormValidation = function () {
             // placeholder: placeholder,
             width: null,
             ajax: {
-                url: ajax+'material',
-                headers: {
-                    'X-CSRF-TOKEN': token
-                },
+                url: ajax+'master/material',
                 dataType: 'json',
                 delay: 250,
                 processResults: function(data, page) {
                     // parse the results into the format expected by Select2.
                     // since we are using custom formatting functions we do not need to
                     // alter the remote JSON data
+                    console.log(data);
                     return {
                         results: data.items
                     };
@@ -143,7 +141,7 @@ var FormValidation = function () {
             // placeholder: "Select... ",
             width: null,
             ajax: {
-                url: ajax+'company',
+                url: ajax+'master/company',
                 dataType: 'json',
                 delay: 250,
                 processResults: function(data, page) {
@@ -238,7 +236,7 @@ var FormValidation = function () {
         $('input.form-control, select.form-control',$(form)).first().removeAttr('disabled');
         $('input.form-control, select.form-control, textarea.form-control',$(form)).val('');
         // $('.select2').next('option').remove();
-        $(".select2 option").empty().trigger('change')
+        $("form .select2 option").empty().trigger('change')
         $('button[type=submit]',$(form)).attr('data-action','post');
         $(form).attr('method','POST');
        
