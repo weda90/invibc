@@ -2,7 +2,7 @@
 Core script to handle the entire theme and core functions
 **/
 
-var host = window.location.protocol+'//'+window.location.host+'/invibc/public';
+var host = window.location.protocol+'//'+window.location.host;
 var ajax = host+'/api/v1/';
 var imgMark = host+'/assets/layouts/layout5/img/logo.png';
 var token = $('meta[name="csrf-token"]').attr('content');
