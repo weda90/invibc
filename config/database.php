@@ -1,5 +1,14 @@
 <?php
 
+$url = parse_url(getenv("INVIBC_DB_URL"));
+
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"], 1);
+
+dump($url);
+
 return [
 
     /*
@@ -26,7 +35,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => 'pgsql',
+    // 'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +76,20 @@ return [
             'engine' => null,
         ],
 
-        'pgsql' => [
+        
+'pgsql' => [
+            'driver' => 'pgsql',
+            'host' => $host,
+            'port' => env('DB_PORT', '5432'),
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+        ],
+
+/*'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '5432'),
@@ -76,8 +99,7 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
-        ],
-
+        ],*/
     ],
 
     /*
